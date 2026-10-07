@@ -8,18 +8,17 @@ public class Solution {
      */
 
     public double average(double t1, double t2, double t3, double t4) {
-        // remove 0.0 and return your answer
-        return 0.0;
+        double y = (t1 + t2 + t3 + t4)/4;
+        return y;
     }
 
     public int roundAverage(double average) {
-        // remove 0 and return your answer
-        return 0;
+        int x = (int)(average + 0.5);
+        return x;
     }
 
     public boolean isPassing(int roundedAverage) {
-        // remove false and return your answer
-        return false;
+        return roundedAverage >= 65;
     }
 
     /*
@@ -27,14 +26,15 @@ public class Solution {
     */
 
     public double totalStock(int shares, double price) {
-        // remove 0.0 and return your answer
-        return 0.0;
+        double z = shares*price;
+        return z;
     }
 
 
     public int roundValueChange(double totalStock) {
-        // remove 0 and return your answer
-        return 0;
+        double a = Math.round(totalStock);
+        int h = (int)(a);
+        return h;
     }
 
     /*
@@ -42,8 +42,22 @@ public class Solution {
     */
    
     public double adjustDigits(double userDouble) {
-        // remove 0.0 and return your answer
-        return 0.0;
+        userDouble = userDouble*100;
+        int b = (int)(userDouble/10000);
+        userDouble = userDouble - b*10000;
+        int c = (int)userDouble/1000;
+        userDouble = userDouble - c*1000;
+        int d = (int)userDouble/100;
+        userDouble = userDouble - d*100;
+        double e = (int)userDouble/10;
+        userDouble = userDouble - e*10;
+        double f = userDouble;
+        b = (b+1)%10;
+        c = (c+1)%10;
+        d = (d+1)%10;
+        e = (e+1)%10;
+        f = (f+1)%10;
+        return b*100 + c*10 + d + e/10 + f/100;
     }
 
     public static void main(String[] args) {
